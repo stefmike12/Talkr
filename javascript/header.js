@@ -25,3 +25,22 @@ window.addEventListener('scroll', function() {
         headerSection.classList.remove('shrunk');
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('header nav ul');
+    
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('header nav');
+
+    hamburger.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
+});
