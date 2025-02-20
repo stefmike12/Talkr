@@ -71,7 +71,7 @@ header nav ul li a {
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit color from parent */
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .header-section {
@@ -88,9 +88,90 @@ header nav ul li a {
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(9.3px);
     border: 1px solid rgba(255, 255, 255, 0.35);
-
     transition: border 1s ease;
+}
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 720px) {
+
+    .header-section {
+        align-items: start;
+        border-radius: 20px;
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        top: 18px;
+        transition: all 1s ease-in-out;
+    }
+
+    header nav {
+        /* display: none;
+        width: 100%;
+        background-color: transparent;
+        height: auto;
+        transition: all 0.3s ease-in-out; */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: transparent;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    header nav.active {
+        /* display: flex;
+        opacity: 1;
+        max-height: 500px;;
+        transition: all 0.3s ease-in-out; */
+        max-height: 500px; /* Adjust as needed */
+        opacity: 1;
+        padding: 24px 0px;   
+    }
+
+    header nav ul {
+        /* display: none;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 8px;
+        transition: max-height 0.3s ease-in-out;
+        transition: gap 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden; */
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 8px;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    header nav ul.active {
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: block;
+        margin-top: 9px;
+    }
 }
 
 .hero {
