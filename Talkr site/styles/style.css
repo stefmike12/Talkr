@@ -1,0 +1,409 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
+    color: #141414;
+}
+
+section {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+p   {
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 24px; /* 150% */
+}
+/* Header styles */
+header {
+    color: #141414;
+    margin: 0 auto;
+    position: sticky;
+    top: 18px;
+    padding: 24px;
+    z-index: 1000;
+    max-width: 1248px;
+    transition: max-width 1.2s ease;
+}
+
+header.shrunk {
+    max-width: 500px;
+}
+
+header nav ul.shrunk {
+    gap: 24px;
+}
+
+.header-section.shrunk {
+    border: 1px solid #E5E5E5;
+}
+
+/* Remove basic styling from nav elements */
+header nav ul {
+    list-style: none; /* Remove bullets from list */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 48px;
+    transition: gap 1s ease;
+}
+
+header nav ul li {
+    display: inline; /* Display list items inline */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 0 auto;
+    border-radius: 9999px;
+
+    background: rgba(255, 255, 255, 0.85);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    transition: border 0.7s ease;
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #141414;
+    padding: 96px 0px 48px 0px;
+    text-align: center;
+    gap: 48px;
+}
+
+.badge {
+    background-color: #141414;
+    color: white;
+    border-radius: 9999px;
+    display: flex;
+    padding: 3px 10px 3px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* CTA Button styles */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #005EFF; /* Button color */
+    color: white;
+    padding: 16px 22px;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cta-button i {
+    margin-right: 8px; /* Add some space between the icon and text */
+    font-size: 14px;
+}
+
+.hero-lead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    text-align: center;
+}
+
+.hero-satisfaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+span.subtitle {
+    color: #666;
+    text-align: center;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.featured-image {
+    padding: 32px 0;
+}
+
+/* Full-width image styles */
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Blurred circles background */
+.hero::before,
+.featured-image::before {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    filter: blur(72px);
+    z-index: -1; /* Ensure the circles are behind the content */
+}
+
+.hero::before {
+    width: 50vw;
+    height: 60%;
+    background-color: rgb(255, 89, 0); /* Red circle */
+    opacity: 0.1;
+    top: 370px;
+    right: 10%;
+}
+
+.featured-image::before {
+    width: 50vw;
+    height: 60%;
+    background-color: #005EFF; /* Blue circle */
+    opacity: 0.1;
+    top: 520px;
+    left: 10%;
+}
+
+.container-bg {
+    background: linear-gradient(0deg, rgba(20,20,20,1) 13%, rgba(0,0,0,0) 36%);;
+}
+
+.testimonial-container {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 38%, rgba(255,255,255,0) 72%);
+    border-radius: 0px 0px 48px 48px;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    padding: 96px 0px 184px 0px;
+}
+
+.testimonial-items::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust the height as needed */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+    z-index: 1; /* Ensure the gradient is above the content */
+    }
+
+.channel-icon {
+    width: 35px;
+    height: auto;
+}
+
+.channel-container {
+    display: flex;
+    justify-content: center;
+    gap: 48px;    
+}
+
+.text-lead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    text-align: center;
+}
+
+.testimonial-items {
+    position: relative;
+    /* Zorg dat de container de volledige breedte benut (of een vaste breedte heeft) */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.testimonial-item {
+    /* Zorg dat ze wat padding en een achtergrond hebben zodat je het effect kunt zien */
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    border-radius: 18px;
+    padding: 18px;
+    box-sizing: border-box;
+    margin: 0; /* Zorg dat er geen extra margin is die invloed kan hebben */
+      
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.profile-image {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 4px;
+}
+
+.user-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.user-review {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #141414;
+    padding: 24px 24px 12px 24px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.talkr-logo-icon {
+    width: auto;
+    position: relative;
+    height: 50px;
+}
+.streamline-private-communicati {
+    position: relative;
+}
+.logo-tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+}
+.footer-left {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+.download {
+    position: relative;
+    font-weight: 600;
+}
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+}
+.terms-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 29px;
+}
+
+.terms-nav a {
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 24px; /* 150% */
+    text-decoration: none;
+}
+
+/* Remove basic styling from nav elements */
+footer nav ul {
+    list-style: none; /* Remove bullets from list */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+footer nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 20px; /* Add some space between items */
+    color: white;
+    font-weight: 600;
+}
+
+footer nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+}
+.footer-parent {
+    max-width: 1248px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    font-family: Inter;
+}
+
