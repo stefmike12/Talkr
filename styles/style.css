@@ -38,7 +38,7 @@ header {
     padding: 24px;
     z-index: 1000;
     max-width: 1248px;
-    transition: max-width 1.2s ease;
+    transition: max-width 1s ease;
 }
 
 header.shrunk {
@@ -59,7 +59,7 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 48px;
+    gap: 32px;
     transition: gap 1s ease;
 }
 
@@ -81,6 +81,7 @@ header nav ul li a {
     padding: 12px;
     margin: 0 auto;
     border-radius: 9999px;
+    flex-wrap: wrap;
 
     background: rgba(255, 255, 255, 0.85);
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
@@ -88,7 +89,7 @@ header nav ul li a {
     -webkit-backdrop-filter: blur(9.3px);
     border: 1px solid rgba(255, 255, 255, 0.35);
 
-    transition: border 0.7s ease;
+    transition: border 1s ease;
 
 }
 
@@ -233,14 +234,17 @@ span.subtitle {
     }
 
 .channel-icon {
-    width: 35px;
-    height: auto;
+    height: 35px;
+    width: auto;
 }
 
 .channel-container {
     display: flex;
     justify-content: center;
-    gap: 48px;    
+    gap: 48px;
+    width: 100%;
+    flex-wrap: wrap;   
+    overflow: hidden;
 }
 
 .text-lead {
