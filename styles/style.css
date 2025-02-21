@@ -210,7 +210,7 @@ header nav ul li a {
 
 .emphasize {
     color: #005EFF;
-    background: -webkit-linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%);
+    background: -webkit-linear-gradient(10deg, #005EFF 1.74%, #BD38FF 93.39%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -219,8 +219,9 @@ header nav ul li a {
 .cta-button {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%); /* Button color */
-    color: white;
+    background-color: #005EFF;
+/*     background: linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%); /* Button color */
+    color: white; */
     padding: 16px 22px;
     border: none;
     border-radius: 18px;
