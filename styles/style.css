@@ -208,6 +208,10 @@ header nav ul li a {
     line-height: 16px;
 }
 
+.emphasize {
+    color: #005EFF;
+}
+
 /* CTA Button styles */
 .cta-button {
     display: inline-flex;
