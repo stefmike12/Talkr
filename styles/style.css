@@ -220,8 +220,9 @@ header nav ul li a {
 .cta-button {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(87.94deg, #005EFF 1.74%, #005EF1 93.39%); /* Button color */
+    background: linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%); /* Button color */
 /*     background-color: #005EFF; */
+    background-size: 800px;
     color: white;
     padding: 16px 22px;
     border: none;
@@ -236,6 +237,7 @@ header nav ul li a {
 .cta-button:hover {
     background: linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%); /* Button color */
 /*     background-color: #005EFF; */
+    background-size: 100%;
     -webkit-box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.05); 
     box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.05);
     transition: all 300ms ease;
