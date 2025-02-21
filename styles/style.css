@@ -210,7 +210,9 @@ header nav ul li a {
 
 .emphasize {
     color: #005EFF;
-    linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%);
+    background: -webkit-linear-gradient(87.94deg, #005EFF 1.74%, #BD38FF 93.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* CTA Button styles */
